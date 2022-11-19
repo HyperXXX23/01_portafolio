@@ -26,20 +26,23 @@
 
   <body>
     <div class="container">
-      <div class="hero">
+      <div class="hero" id="home">
         <nav>
           <div class="cont-logo">
             <img src="img/logo.svg" alt="" />
             <h2 class="logo">Luis<span>Armando</span></h2>
           </div>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
+          <ul class="menu-open">
+            <li>
+              <a href=""><i class="fa fa-arrow-circle-o-right"></i></a>
+            </li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
             <li><a href="#">Skill</a></li>
             <li><a href="#">Contact us</a></li>
           </ul>
-          <a href="#" class="btn"><i class="fa fa-bars"></i></a>
+          <a href="#" class="btn hmg-menu"><i class="fa fa-bars"></i></a>
         </nav>
         <div class="content">
           <h4>Hello, my name is</h4>
@@ -61,7 +64,7 @@
 
       <!-- Seccion sobre mi -->
 
-      <section class="about">
+      <section class="about" id="about">
         <div class="main">
           <img src="img/mio.png" alt="" />
           <div class="about-text">
@@ -80,7 +83,7 @@
       </section>
 
       <!-- servicios -->
-      <div class="services">
+      <div class="services" id="services">
         <div class="title">
           <h2>Our Services</h2>
         </div>
@@ -158,4 +161,14 @@
       </footer>
     </div>
   </body>
+  <script>
+    const hambBtn = document.querySelector(".hmg-menu");
+    const backBtn = document.querySelector(".fa-arrow-circle-o-right");
+    hambBtn.addEventListener("click", () => {
+      document.querySelector(".menu-open").classList.toggle("open");
+    });
+    backBtn.addEventListener("click", () => {
+      document.querySelector(".menu-open").classList.toggle("open");
+    });
+  </script>
 </html>

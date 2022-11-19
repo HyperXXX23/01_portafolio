@@ -40,12 +40,11 @@
 .hero nav{
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-top: 25px;
-  padding-left: 8%;
-  padding-right: 8%;
-  padding-bottom: 25px;
-  position: relative;
+  justify-content: space-around;
+  padding: 15px 25px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 }
 .hero .logo{
   font-family: 'Stick No Bills', sans-serif;
@@ -74,6 +73,10 @@ span{
   font-weight: bold;
   text-transform: capitalize;
 }
+.hero nav ul li a i{
+  font-size: 2rem;
+  display: none;
+}
 .hero nav ul li a:hover{
   color: #f9004d;
   transition: .4s;
@@ -83,20 +86,35 @@ span{
     width: 100%;
     justify-content: space-around;
   }
-  .hero nav ul{
+  .hero nav ul li{
+    padding: 2rem 0;
+  }
+  .hero nav ul li a i{
+    font-size: 2rem;
+    display: block;
+  }
+  .hero nav .menu-open{
     position: absolute;
-    width: 80vw;
-    height: 500px;
+    width: 95vw;
+    height: 95vh;
     top: 0;
-    right: 0;
-    display: none;
+    right: -100%;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f9004d;
+    background-color: #f9004f;
     z-index: 100;
+    border-bottom-left-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    
   }
 }
+.open{
+  right: 0 !important;
+  transition: all 0.3s ease-in-out;
+}
+
 .cont-logo{
   width: 4rem;
   display: flex;
@@ -206,7 +224,7 @@ h4{
     font-size: 1rem;
     width: 80%;
     padding: 10px;
-    top: 0;
+    top: 55vw;
     left: 0;
     margin-bottom: 5rem;
   }
