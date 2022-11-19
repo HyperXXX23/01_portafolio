@@ -12,6 +12,7 @@
 .container{
   max-height: 100vh;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 
 }
 .hero{
@@ -68,10 +69,12 @@ span{
 }
 
 .hero nav ul li a{
+  padding-bottom: 5px;
   color: white;
   text-decoration: none;
   font-weight: bold;
   text-transform: capitalize;
+  border-bottom: 2px solid transparent;
 }
 .hero nav ul li a i{
   font-size: 2rem;
@@ -89,7 +92,8 @@ span{
   .hero nav ul li{
     padding: 2rem 0;
   }
-  .hero nav ul li a i{
+  .hero nav ul li i{
+    color: white;
     font-size: 2rem;
     display: block;
   }
@@ -108,6 +112,11 @@ span{
     border-bottom-left-radius: 50px;
     transition: all 0.3s ease-in-out;
     
+  }
+  .hero nav ul li a:hover{
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    transition: .4s;
   }
 }
 .open{
