@@ -17,6 +17,7 @@
 }
 .hero{
   min-height: 100vh;
+  height: 100vh;
   width: 100%;
   background-image: url('img/img3.jpg'); 
   background-size: cover;
@@ -131,6 +132,9 @@ span{
   justify-content: center;
   align-items: center;
   margin-left: 4rem;
+}
+.cont-logo img{
+  width: 50px;
 }
 @media(max-width:1130px){
   .cont-logo{
@@ -334,6 +338,10 @@ button{
   padding: 13px 30px;
   border-radius: 30px;
   transition: .4s;
+}
+button a {
+  text-decoration: none;
+  color:#fff;
 }
 
 button:hover{
@@ -657,7 +665,7 @@ footer p:nth-child(2){
     max-width: 1100px;
   }
 }
-.cont-logo1{
+.cont-img img{
   width: 200px;
   height: auto;
   display: flex;
